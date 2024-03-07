@@ -95,7 +95,82 @@ void setup() { // This setup is needed for both functions
 
 
 //Part 3:
-State change code in the different file
+//******************************************************************* RGB LED COUNTER MODULE *****************************************************************
+// // This constant won't change:
+// const int buttonPin = 2;  // the pin that the pushbutton is attached to
+// const int ledPinR = 5;    // the pin that the LED is attached to
+// const int ledPinG = 3;
+// const int ledPinB = 4;
+
+// // Variables will change:
+// int buttonPushCounter = 0;  // counter for the number of button presses
+// int buttonState = 0;        // current state of the button
+// int lastButtonState = 0;    // previous state of the button
+
+// void setup() {
+//   // initialize the button pin as a input:
+//   pinMode(buttonPin, INPUT);
+//   // initialize the LED as an output:
+//   pinMode(ledPinR, OUTPUT);
+//   pinMode(ledPinG, OUTPUT);
+//   pinMode(ledPinB, OUTPUT);
+//   // initialize serial communication:
+//   Serial.begin(9600);// turn on serial output at a rate of 9600 bits per second (baud rate)
+// }
+
+
+// void loop() {
+//   // read the pushbutton input pin:
+//   buttonState = digitalRead(buttonPin);
+
+//   // compare the buttonState to its previous state
+//   if (buttonState != lastButtonState) {
+//     // if the state has changed, increment the counter
+//     if (buttonState == HIGH) {
+//       // if the current state is HIGH then the button went from off to on:
+//       if (buttonPushCounter < 5){ //Counting the button pushes until it reaches 5
+//         buttonPushCounter++; // increment button count
+//         Serial.println("on"); // print on serial  
+//         Serial.print("number of button pushes: ");
+//         Serial.println(buttonPushCounter);        
+//       }
+//       else{
+//         buttonPushCounter = 0;
+//         buttonPushCounter++;
+//         Serial.println("on");
+//         Serial.print("number of button pushes: ");
+//         Serial.println(buttonPushCounter);
+//       }
+//     } else {
+//       // if the current state is LOW then the button went from on to off:
+//       Serial.println("off");
+//     }
+//     // Delay a little bit to avoid bouncing
+//     delay(50);
+//   }
+//   // save the current state as the last state, for next time through the loop
+//   lastButtonState = buttonState;
+
+
+//   // turns on the LED every four button pushes by checking the modulo of the
+//   // button push counter. the modulo function gives you the remainder of the
+//   // division of two numbers:
+//   if(buttonPushCounter>1 & buttonPushCounter % 4 == 0){
+//     digitalWrite(ledPinB, HIGH);
+//   }
+//   else if (buttonPushCounter>1 & buttonPushCounter % 2 == 0) {
+//     digitalWrite(ledPinR, HIGH);
+//   }
+//   else if(buttonPushCounter>1 & buttonPushCounter % 3 == 0){
+//     digitalWrite(ledPinG, HIGH);
+
+//   } 
+//   else {
+//     digitalWrite(ledPinR, LOW);
+//     digitalWrite(ledPinG, LOW);
+//     digitalWrite(ledPinB, LOW);
+//   }
+// }
 
 
 
