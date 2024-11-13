@@ -7,17 +7,17 @@
 
 //Part 2:
 //Initalize RGB LED output pins on the arduino
-int RED = 2;    
-int GREEN = 3;   
-int BLUE = 4;   
+// int RED = 2;    
+// int GREEN = 3;   
+// int BLUE = 4;   
 
 
-void setup() { // This setup is needed for both functions
-  //Assinging the pins to outputs from the arduino
-  pinMode(RED,OUTPUT); 
-  pinMode(GREEN,OUTPUT);
-  pinMode(BLUE,OUTPUT);
-}
+// void setup() { // This setup is needed for both functions
+//   //Assinging the pins to outputs from the arduino
+//   pinMode(RED,OUTPUT); 
+//   pinMode(GREEN,OUTPUT);
+//   pinMode(BLUE,OUTPUT);
+// }
 
 // void loop() {
 //   digitalWrite(RED,HIGH);         // Red LED is on
@@ -156,16 +156,17 @@ void setup() { // This setup is needed for both functions
 //   // button push counter. the modulo function gives you the remainder of the
 //   // division of two numbers:
 //   if(buttonPushCounter>1 & buttonPushCounter % 4 == 0){
-//     digitalWrite(ledPinB, HIGH);
+//     digitalWrite(ledPinB, HIGH); // Turns on blue when the value has no remainder when divided by 4
 //   }
 //   else if (buttonPushCounter>1 & buttonPushCounter % 2 == 0) {
-//     digitalWrite(ledPinR, HIGH);
+//     digitalWrite(ledPinR, HIGH); // Turns on Red when the value has no remainder when divided by 2
 //   }
 //   else if(buttonPushCounter>1 & buttonPushCounter % 3 == 0){
-//     digitalWrite(ledPinG, HIGH);
+//     digitalWrite(ledPinG, HIGH); // Turns on Green when the value has no remainder when divided by 3
 
 //   } 
 //   else {
+//     // when anything else like 1 or 5 turns off all of the colors
 //     digitalWrite(ledPinR, LOW);
 //     digitalWrite(ledPinG, LOW);
 //     digitalWrite(ledPinB, LOW);
