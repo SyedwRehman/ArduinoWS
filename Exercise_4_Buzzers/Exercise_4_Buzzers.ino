@@ -1,174 +1,106 @@
-//************************************************************ EXERCISE 4: Active/Passive Buzzers ************************************************************ 
-
-// //Active Buzzers:
-
-// //Part 1:
-// int buzzerPin = 8; // buzzer pin 
-// int buttonPin = 7; // button pin
-
-// void setup() {
-//   pinMode(buzzerPin, OUTPUT); // setting the buzzer pin as an output
-//   pinMode(buttonPin, INPUT_PULLUP); // setting the button pin as an input pull up resistor 
-// }
-
-// void loop() {
-//   int buttonState = digitalRead(buttonPin);
-//   if (buttonState == LOW) {
-//     digitalWrite(buzzerPin, HIGH);
-//   }
-
-//   if (buttonState == HIGH) {
-//     digitalWrite(buzzerPin, LOW);
-//   }
-// }
-
-
-// //Part2:
-// //Alarm
-// int buzzerPin =3; // Pin number for the buzzer
-// int blue = 5; // Pin number for the blue LED
-// int red =4; // Pin number for the red LED
-
-// void togglecolor(int pin, int read, int ms){ // function used for toggling the buzzer
-//   digitalWrite(pin, !digitalRead(read));
-//   delay(ms);
-
-// }
-
-// void setup() {
-//   pinMode(buzzerPin, OUTPUT); // Sets Pin number 3 as the output
-//   pinMode(blue, OUTPUT); // Sets Pin number 5 as an output
-//   pinMode(red,OUTPUT); // Sets pin number 4 as an output
-//   digitalWrite(red,HIGH); //Initially sets red to on
-// }
-
-// void loop() { // loop again
-//   togglecolor(blue,blue,0); // Turns on Blue
-//   togglecolor(red,red,500); // Turns off Red
-//   digitalWrite(buzzerPin,HIGH); // buzzer is on
-//   togglecolor(blue,blue,0); // Turns off Blue
-//   togglecolor(red,red,500); // Turns on Red
-//   digitalWrite(buzzerPin,LOW); //buzzer if off 
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//************************************************************ EXERCISE 4: Active & Passive Buzzers ************************************************************ 
 
 //Passive Buzzers:
 //Part 1:
 // (NOTE TONE FUNCTIONS SHOULD NOT BE USED ON ACTIVE BUZZERS)
 
-// int buzzerPin = 11;
-// void setup(){
-//   pinMode(buzzerPin, OUTPUT);
-// }
+int buzzerPin = 11;
+void setup(){
+  pinMode(buzzerPin, OUTPUT);
+}
 
-// void loop(){
-//   // Tone() Functions 
-//   tone(buzzerPin, 261); //Middle C
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+void loop(){
+  // Tone() Functions 
+  tone(buzzerPin, 261); //Middle C
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 277); //C#
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 277); //C#
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 294); //D
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 294); //D
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 311); //D#
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 311); //D#
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 330); //E
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 330); //E
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 349); //F
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 349); //F
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 370); //F#
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 370); //F#
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 392); //G
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 392); //G
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 415); //G#
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
+  tone(buzzerPin, 415); //G#
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
 
-//   tone(buzzerPin, 440); //A
-//   delay(1000);
-//   noTone(buzzerPin);
-//   delay(1000);
-// }  
+  tone(buzzerPin, 440); //A
+  delay(1000);
+  noTone(buzzerPin);
+  delay(1000);
+}  
 
 
 
 #include "pitches.h" // Includes the pitches.h file content into this .ino file (Don't comment out for the passive buzzer files)
 
-int bpin = 11;  // Defining variable for buzzer pin as the output
-#define C 262
-#define CSH 277
-#define D 294
-#define DSH 311
-#define E 330
-#define F 349
-#define FSH 370
-#define G 392
-#define GSH 415
-#define A 440
-#define ASH 466
-#define B 494
-#define NOTE_C5  523
-#define HF 750
-#define HFD HF+HF/2
-#define QT 375
-#define QTD QT+QT/2
-#define ET WH/8
-#define ETD ET+ET/2
-#define ST 94
-#define WH 1500
+// int bpin = 11;  // Defining variable for buzzer pin as the output
+// #define C 262
+// #define CSH 277
+// #define D 294
+// #define DSH 311
+// #define E 330
+// #define F 349
+// #define FSH 370
+// #define G 392
+// #define GSH 415
+// #define A 440
+// #define ASH 466
+// #define B 494
+// #define NOTE_C5  523
+// #define HF 750
+// #define HFD HF+HF/2
+// #define QT 375
+// #define QTD QT+QT/2
+// #define ET WH/8
+// #define ETD ET+ET/2
+// #define ST 94
+// #define WH 1500
 
 
 
-void tlet(int pin, int let, int del){ // function for playing the Tone with the Letter input
-  tone(pin,let,del); // plays tone on a specific pin, frequency, and delay
-  int pause = del *1.30; // calculates the pause needed before the next tone
-  delay(pause); // plays the pause with the tone so that there is enough room for another tone to play after
-  noTone(pin); // stops the current tone being played at that frequency
-}
+// void tlet(int pin, int let, int del){ // function for playing the Tone with the Letter input
+//   tone(pin,let,del); // plays tone on a specific pin, frequency, and delay
+//   int pause = del *1.30; // calculates the pause needed before the next tone
+//   delay(pause); // plays the pause with the tone so that there is enough room for another tone to play after
+//   noTone(pin); // stops the current tone being played at that frequency
+// }
 
-void setup(){
-  pinMode(bpin,OUTPUT); // Setting up the buzzer pin as the output
-}
+// void setup(){
+//   pinMode(bpin,OUTPUT); // Setting up the buzzer pin as the output
+// }
 
 // //Twinkle Twinkle Little Star
 // void loop(){
@@ -223,7 +155,7 @@ void setup(){
 
 // // Keep setup the same but comment out last loop
 
-// This code is for O Canada
+//This code is for O Canada
 // void loop(){
 //   tlet(bpin,E,HF);//O
 //   tlet(bpin,G,QTD);//Can
@@ -317,14 +249,15 @@ void setup(){
 // }
 
 
+// // Part 2:
 // // Comment the setup and definitions from before out since we are redefining them here with additional info
 
 // int bp = 11; // buzzer pin variable defineing which pin we are going to use
 // #define R 4
 // #define G 3
 // #define B 2
-// #define NA 7
-// #define W 10 //
+// #define NA 7 // value for nothing
+// #define W 10 // value for white
 
 // #define HF WH/2     //Half Note (length of the note from a whole is /2)
 // #define HFD HF+HF/2 //Hlaf Note Dotted (means the note length + note length/2)
@@ -357,13 +290,6 @@ void setup(){
 //     noTone(pin);
 //   }
 // }
-
-
-// // void setup(){ // used to setup the outputs without the song playing and it being expected to play in the loop function
-// //   pinMode(R,OUTPUT);
-// //   pinMode(G,OUTPUT);
-// //   pinMode(B,OUTPUT);
-// // }
 
 
 // void setup(){ // used to play the song only once
@@ -401,6 +327,11 @@ void setup(){
 // void loop(){} // no functions used here since the code plays once in th setup only in this example but its still required to be called
 
 
+// void setup(){ // used to setup the outputs without the song playing and it being expected to play in the loop function
+//   pinMode(R,OUTPUT);
+//   pinMode(G,OUTPUT);
+//   pinMode(B,OUTPUT);
+// }
 
 
 // // Merry Christmas
@@ -435,7 +366,7 @@ void setup(){
 //   tlet(bp,NOTE_A4,QT,W); //-py
 //   tlet(bp,NOTE_FS4,QT,G); //New
 //   tlet(bp,NOTE_G4,HF,R); //Year!
-
+// }
 
 // // Happy Birthday
 // void loop(){
@@ -491,8 +422,8 @@ void setup(){
 // }
 
 
-
-// // Don't know if we will have time for this 
+// // Part 3:
+// // Don't know if we will have time for this but it combines everything we learned
 
 // #define R 4
 // #define G 3
